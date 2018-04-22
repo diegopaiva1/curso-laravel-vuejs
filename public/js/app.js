@@ -14009,7 +14009,7 @@ var app = new Vue({
     data: {
         conteudos: [{ id: 1, titulo: 'Conteúdo 1', texto: 'Este é o primeiro conteúdo' }, { id: 2, titulo: 'Conteúdo 2', texto: 'Este é o segundo conteúdo' }, { id: 3, titulo: 'Conteúdo 3', texto: 'Este é o terceiro conteúdo' }],
         produtos: [{ id: 1, nome: 'Bicicleta', quantidade: 230, cor: 'orange',
-            icone: 'ion-android-bicycle', url: '#' }, { id: 2, nome: 'Celular', quantidade: 580, cor: 'darkgrey',
+            icone: 'ion-android-bicycle', url: '/home/bicicletas' }, { id: 2, nome: 'Celular', quantidade: 580, cor: 'darkgrey',
             icone: 'ion-iphone', url: "#" }, { id: 3, nome: 'Videogame', quantidade: 90, cor: 'purple',
             icone: 'ion-ios-game-controller-b', url: "#" }]
 

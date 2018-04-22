@@ -29,7 +29,7 @@ var app = new Vue({
         ],
         produtos: [
             { id: 1, nome: 'Bicicleta', quantidade: 230, cor: 'orange',
-              icone: 'ion-android-bicycle', url: '#' },
+              icone: 'ion-android-bicycle', url: '/home/bicicletas' },
             { id: 2, nome: 'Celular', quantidade: 580, cor: 'darkgrey',
               icone: 'ion-iphone', url: "#" },
             { id: 3, nome: 'Videogame', quantidade: 90, cor: 'purple', 
