@@ -12,7 +12,7 @@ interface RepositoryInterface
 
     public function update($id, array $data);
 
-    public function delete($id);
+    public function destroy($id);
 
     public function find($id);
 

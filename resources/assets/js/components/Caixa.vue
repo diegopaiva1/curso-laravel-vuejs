@@ -1,13 +1,13 @@
 <template>
     <div class="small-box" :style="defineCor">
         <div class="inner">
-            <h3>{{ produto.quantidade }}</h3>
-            <p>{{ produto.nome }}</p>
+            <h3>{{ categoria.quantidade }}</h3>
+            <p>{{ categoria.nome }}</p>
         </div>
         <div class="icon">
-            <i :class="produto.icone"></i>
+            <i :class="categoria.icone"></i>
         </div>
-        <a :href="produto.url" class="small-box-footer">
+        <a :href="categoria.url" class="small-box-footer">
             More info <i class="fa fa-arrow-circle-right"></i>
         </a>
     </div>
@@ -15,10 +15,10 @@
 
 <script>
     export default {
-        props: ['produto'],
+        props: ['categoria'],
         computed: {
             defineCor: function() {
-                return "background-color: " + this.produto.cor + " !important";
+                return "background-color: " + this.categoria.cor + " !important";
             }
         }
     }

@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div v-for="conteudo in conteudos" class="col-md-4">
-                <painel :conteudo="conteudo" font-color="white" background-color="success">
-                </painel>
+        <painel
+        titulo="Produtos" 
+        font-color="white" 
+        body-background-color="#e8dfb0" 
+        header-background-color="#282f31">
+            <div class="row justisfy-content-center">
+                <div v-for="categoria in categorias" class="col-md-4">
+                    <caixa :categoria="categoria"></caixa>
+                </div>
             </div>
-        </div>
-        <div class="row justisfy-content-center">
-            <div v-for="produto in produtos" class="col-md-4">
-                <caixa :produto="produto"></caixa>
-            </div>
-        </div>
+        </painel>
     </div> 
 @endsection

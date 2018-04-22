@@ -16,7 +16,7 @@ class BicicletaController extends Controller
     
     public function index()
     {
-        return $this->bicicleta->all();
+        return view('bicicletas.index');
     }
 
     public function create()
@@ -26,7 +26,7 @@ class BicicletaController extends Controller
 
     public function store(Request $request)
     {
-        //
+        return $this->bicicleta->create($request->all());
     }
 
     public function show($id)
@@ -41,11 +41,11 @@ class BicicletaController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        return $this->bicicleta->update($id, $request->all());
     }
 
     public function destroy($id)
     {
-        //
+        return $this->bicicleta->destroy($id);
     }
 }

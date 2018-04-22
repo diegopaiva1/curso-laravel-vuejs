@@ -31,12 +31,7 @@ abstract class BaseRepository implements RepositoryInterface
         return $this->model->create($data);
     }
 
-    public function update($id, array $data)
-    {
-        return $this->model->where('id', $id)->update($data);
-    }
-
-    public function delete($id)
+    public function destroy($id)
     {
         return $this->model->delete($id);
     }
@@ -44,6 +39,13 @@ abstract class BaseRepository implements RepositoryInterface
     public function find($id)
     {
         return $this->model->findOrFail($id);
+    }
+
+    public function update($id, array $data)
+    {
+        $modelInstance = $this->model->find($id);
+        $modelInstance->update($data);
+        $modelInstance->save();
     }
 
     public function findBy($field, $value)
