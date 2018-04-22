@@ -1,16 +1,16 @@
 <template>
     <div :class="setCardOptions">
-        <div class="card-header">{{ titulo }}</div>
+        <div class="card-header">{{ conteudo.titulo }}</div>
 
         <div class="card-body">
-            <slot></slot>
+            {{ conteudo.texto }}
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['titulo', 'backgroundColor', 'fontColor'],
+        props: ['conteudo', 'backgroundColor', 'fontColor'],
         computed:
         {
             setCardOptions: function() {

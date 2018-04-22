@@ -3,22 +3,14 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-4">
-                <painel titulo="Conteudo 1" font-color="white" background-color="dark">
-                    Este é o primeiro conteúdo!
+            <div v-for="conteudo in conteudos" class="col-md-4">
+                <painel :conteudo="conteudo" font-color="white" background-color="success">
                 </painel>
             </div>
-
-            <div class="col-md-4">
-                <painel titulo="Conteudo 2" font-color="white" background-color="primary">
-                    Este é o segundo conteúdo!
-                </painel>
-            </div>
-
-            <div class="col-md-4">
-                <painel titulo="Conteudo 3" font-color="white" background-color="success">
-                    Este é o terceiro conteúdo!
-                </painel>
+        </div>
+        <div class="row justisfy-content-center">
+            <div v-for="produto in produtos" class="col-md-4">
+                <caixa :produto="produto"></caixa>
             </div>
         </div>
     </div> 
